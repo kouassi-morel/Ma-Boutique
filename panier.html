@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon panier - Ma Boutique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="en-tete">
+        <h1><a href="index.html">Ma Boutique</a></h1>
+
+        <button type="button" class="btn-menu" aria-label="ouvrir le menu">&#9776;</button>
+
+        <nav class="navigation">
+           <a href="index.html">Accueil</a>
+           <a href="catalogue.html">Produit</a>
+           <a href="#">Contact</a>
+           <a href="panier.html">Panier (<span id="compteur">0</span>)</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <h2>Mon panier</h2>
+
+        <div class="panier-contenu">
+            <div id="liste-panier"></div>
+
+            <aside class="resume" id="resume">
+               <h3>Résumé</h3>
+               <p class="ligne-total">Total : <strong id="total">0 FCFA</strong></p>
+               <button type="button" class="btn-commander" id="btn-commander">Commander</button>
+
+               <button type="button" id="btn-whatsapp" class="btn-whatsapp">
+                  Commander sur WhatsApp
+               </button>
+            </aside>
+        </div>
+
+        <p id="panier-vide" hidden>
+            Votre panier est vide. <a href="index.html">Continuer vos achats</a>
+        </p>
+
+        <div id="commande" class="modal" hidden>
+            <div class="modal-boite" role="dialog" aria-modal="true" aria-labelledby="titre-commande">
+
+                <button type="button" class="modal-fermer" id="fermer-commande" aria-label="fermer">&times;</button>
+                
+                <!-- vue 1 : le formulaire-->
+                <div id="vue-formulaire">
+                    <h2 id="titre-commande">Finaliser ma commande</h2>
+                    <p class="modal-total">Total à payer : <strong id="modal-total"></strong></p>
+
+                    <form id="form-commande">
+                       <div class="champ">
+                         <label for="nom">Nom complet</label>
+                         <input type="text" id="nom" name="nom" placeholder="Ex : kouassi ange" required>
+                       </div>
+
+                       <div class="champ">
+                         <label for="Téléphone">Téléphone</label>
+                         <input type="tel" id="telephone" name="telephone" placeholder="07 00 00 00 00"  pattern="[0-9 +]{8,15}" required>
+                       </div>
+
+                       <div class="champ">
+                         <label for="Ville">Ville</label>
+                         <input type="text" id="ville" name="ville" placeholder="Ex : Abidjan" required>
+                       </div>
+
+                       <div class="champ">
+                         <label for="adresse">Adresse de livraison</label>
+                         <textarea id="adresse" name="adresse" rows="2" placeholder="Quartier, rue, repère..."  required></textarea>
+                       </div>
+
+                       <p class="titre-paiement">Mode de paiement</p>
+                       <div class="option-paiement">
+                          <label class="option">
+                            <input type="radio" name="paiement" value="Paiement a la livraison" checked>
+                            <span>Paiement à la livraison</span>
+                          </label>
+                          <label class="option">
+                            <input type="radio" name="paiement" value="Orange Money">
+                            <span>Orange Money</span>
+                          </label>
+                          <label class="option">
+                            <input type="radio" name="paiement" value="MTN MoMo">
+                            <span>MTN MoMo</span>
+                          </label>
+                          <label class="option">
+                            <input type="radio" name="paiement" value="Wave">
+                            <span>Wave</span>
+                          </label>
+                       </div>
+                      <button type="submit" class="btn-confirmer"> Comnfirmer la commande</button>    
+                    </form>
+                </div>
+
+                <!--vue2 : LA confirmation -->>
+                <div>
+                    <div class="pastille">&#10003;</div>
+                    <h2>Merci pour votre commande ></h2>
+                    <p>Numero : <strong id="conf-numero"></strong></p>
+                    <p>Client : <span id="conf-nom"></span></p>
+                    <p>Livraison : <span id="conf-adresse"></span></p>
+                    <p>Paiement : <span id="conf-paiement"></span></p>
+                    <p>Total : <strong id="conf-total"></strong></p>
+                    <a href="index.html" class="btn-confirmer lien-retour">Retour à la boutique</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="panier.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

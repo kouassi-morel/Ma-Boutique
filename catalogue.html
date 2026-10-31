@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tous les produit - Ma Boutique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header class="en-tete">
+      <h1><a href="index.html">Ma Boutique</a></h1>
+
+      <form class="recherche" id="recherche"> 
+        <input type="search" placeholder="Rechercher un produit..." aria-label="Rechercher un produit">
+        <button type="submit">Recherche</button>
+      </form>
+
+      <button type="button" class="btn-menu" aria-label="ouvrir le menu">&#9776;</button>
+
+      <nav class="navigation">
+        <a href="index.html">Accueil</a>
+        <a href="catalogue.html" class="actif">Produits</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="panier.html">Panier (<span id="compteur">0</span>)</a>
+      </nav>
+    </header>
+
+    <main>
+        <p class="fil-ariane"><a href="index.html">Accueil</a>&gt; Produits</p>
+        <h2 class="titre-catalogue">Tous les produits</h2>
+
+        <div class="catalogue">
+
+           <!-- Les filtres, à gauche -->>
+            <form class="filtres" id="filtres">
+              <h3>Filtres</h3>
+
+              <div class="filtres" id="filtres">
+                <h4>Catégorie</h4>
+                <div id="filtre-categories"></div>
+              </div>
+
+              <div>
+                <h4>Marque</h4>
+                <div id="filtre-marques"></div>
+              </div>
+
+              <div>
+                <h4>Prix (FCFA)</h4>
+                <div class="prix-champs">
+                    <input type="number" id="prix-min" placeholder="min" min="0">
+                    <span>-</span>
+                    <input type="number" id="prix-max" placeholder="Max" min="0">
+                </div>
+              </div>
+
+              <div class="filtre">
+                <h4>Evaluation</h4>
+                <label class="option-filtre"><input type="radio" name="note" value="0" checked>Toutes les notes</label>
+                <label class="option-filtre"><input type="radio" name="note" value="4">★★★★ et plus</label>
+                <label class="option-filtre"><input type="radio" name="note" value="3">★★★ et plus</label>
+              </div>
+
+              <button type="button" class="btn-reinit" id="reinitialiser">Réinitialiser</button>
+            </form>
+
+            <!-- Les produits, à droite -->
+
+            <section>
+                <div class="barre-resultats">
+                   <button type="button" class="btn-filtres" id="btn-filtres">Masquer les filtres</button>
+                   <p class="compte-resultats" id="compte-resultats"></p>
+                </div>
+                <div class="liste-produits" id="catalogue-liste"></div>
+                <p id="catalogue-vide" hidden>Aucun produit ne correspond à vos filtres.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="pied-page">
+      <h3>Contact</h3>
+      <p>Téléphone : 07 00 00 00 00</p>
+      <p>Abidjan, Côte d'Ivoire</p>
+    </footer>
+
+    <button type="button" id="btn-haut" class="btn-haut" aria-label="Retour en haut">&#8593;</button>
+
+    <script src="donnees-produits.js"></script>
+    <script src="catalogue.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

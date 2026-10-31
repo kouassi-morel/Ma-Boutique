@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit - Ma Boutique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="en-tete">
+        <h1><a href="index.html">Ma Boutique</a></h1>
+        
+        <button type="button" class="btn-menu" aria-label="ouvrir le menu">&#9776;</button>
+
+        <nav class="navigation">
+            <a href="index.html">Accueil</a>
+            <a href="catalogue.html">Produits</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="panier.html">Panier (<span id="compteur">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <p class="fil-ariane">
+          <a href="index.html">Accueil</a> &gt; <span id="p-fil">Produit</span>
+        </p>
+
+        <section class="fiche" id="fiche" hidden>
+          <img id="p-image" class="fiche-image" src="" alt="">
+
+          <div class="fiche-infos">
+            <h2 id="p-nom"></h2>
+            <p class="note" id="p-note"></p>
+              
+            <p class="fiche-prix">
+              <strong id="p-prix"></strong>
+              <span class="ancien-prix" id="p-ancien"></span>
+              <span class="badge-inline" id="p-remise"></span>
+            </p>
+
+            <p class="stock" id="p-stock"></p>
+            <p id="p-description"></p>
+            <ul id="p-details"></ul>
+
+            <div class="fiche-actions">
+              <div class="quantite">
+                <button type="button" id="p-moins">&minus;</button>
+                <span id="p-quantite">1</span>
+                <button type="button" id="p-plus">+</button>
+              </div>
+              <button type="button" class="btn-commander" id="p-ajouter">Ajouter au panier</button>
+            </div>
+
+            <p class="message-ajout" id="p-message" hidden>
+              Produit ajouté au panier. <a href="panier.html">Voir le panier</a>
+            </p>
+          </div>
+        </section>
+
+        <section class="similaires" id="similaires" hidden>
+           <h2>Vous aimerez aussi</h2>
+           
+           <div class="rangee">
+              <button type="button" class="rangee-fleche gauche" aria-label="Précédent">&#10094;</button>
+              <div class="rangee-defile" id="similaires-liste"></div>
+              <button type="button" class="rangee-fleche droite" aria-label="Suivant">&#10095;</button>
+           </div>
+
+           <p id="similaires-vide" hidden>Aucun autre produit dans cette catégorie.</p>
+        </section>
+
+        <p id="introuvable" hidden>
+           Produit introuvable. <a href="index.html">Retour à la boutique</a>
+        </p>
+    </main>
+
+    <footer class="pied-page">
+      <h3>Contact</h3>
+      <p>Téléphone : 07 00 00 00 00</p>
+      <p>Abidjan, Côte d'Ivoire</p>
+    </footer>
+
+    <button type="button" id="btn-haut" class="btn-haut" aria-label="Retour en haut">&#8593;</button>
+
+    <script src="donnees-produits.js"></script>
+    <script src="produit.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+</html>

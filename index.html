@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ma Boutique</title>
+</head>
+<body>
+    
+    <header class="en-tete">
+        <h1>Ma Boutique</h1>
+
+        <form class="recherche">
+            <input type="search" 
+            placeholder="Recherche un produit..."
+            aria-label="Recherche un produit">
+            <button type="submit">Recherche</button>
+        </form>
+
+        <button type="button" class="btn-menu" aria-label="ouvrir le menu">&#9776;</button>
+
+        <nav class="navigation">
+           <a href="index.html" class="actif">Accueil</a>
+           <a href="catalogue.html">Produits</a>
+           <a href="#contact">Contact</a>
+           <a href="panier.html">Panier (<span id="compteur">0</span>)</a>
+        </nav>
+            
+        
+    </header>
+
+    <nav class="categories">
+        <a href="index.html?categorie=tous#produits" data-catagorie="tous">Tous les produits</a>
+        <a href="index.html?categorie=baskets#produits" data-catagorie="baskets">Baskets</a>
+        <a href="index.html?categorie=sandales#produit" data-catagorie="sandales">Santale</a>
+        <a href="index.html?categorie=sport#produits" data-catagorie="sport">Sport</a>
+    </nav>
+
+    <main>
+        <section class="banniere">
+            <img src="imges/banniere4.jpg" alt="banniere" class="active">
+            <img src="imges/banniere1.jpg" alt="banniere">
+            <img src="imges/banniere2.jpg" alt="banniere">
+            <img src="imges/banniere3.jpg" alt="banniere">
+
+            <button class="fleche precedent">&#10094;</button>
+            <button class="fleche suivant">&#10095;</button>
+        </section>
+
+        <section class="services">
+           <div class="service">
+             <span class="service-icone">🏷️</span>
+             <div>
+                <strong>Prix usine</strong>
+                <p>Les meilleurs prix</p>
+             </div>
+           </div>
+           <div class="service">
+             <span class="service-icone">📦</span>
+             <div>
+                <strong>Envoi de colis</strong>
+                <p>Partout en Côte d'Ivoire</p>
+             </div>
+           </div>
+           <div class="service">
+             <span class="service-icone">💵</span>
+             <div>
+                <strong>Paiement à la livraison</strong>
+                <p>Payez à la réception</p>
+             </div>
+           </div>
+           <div class="service">
+             <span class="service-icone">💬</span>
+             <div>
+                <strong>Commande WhatsApp</strong>
+                <p>Rapide et simple</p>
+             </div>
+           </div>
+        </section>
+
+        <section class="flash" id="ventes-flash">
+           <div class="flash-entete">
+             <h2>Vente flash | Chaque jour</h2>
+             <a href="catalogue.html" class="voir-plus">Voir plus &rarr;</a>
+           </div>
+
+           <div class="rangee">
+             <button type="button" class="rangee-fleche gauche" aria-label="Précédent">&#10094;</button>
+              
+             <div class="rangee-defile">
+                <article class="carte-produit" data-id="f1" data-categorie="boner" data-prix="5000 FCFA" data-description="">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=f1"><img src="imges/image-carte/boner.jpg" alt="boner"></a>
+                   <h3><a href="produit.html?id=f1">Boner noir</a></h3>
+                   <p class="description">boner</p>
+                   <p class="note">★★★★☆<span>40</span></p>
+                   <p class="prix">5000 FCFA<span class="ancien-prix">10 000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f2" data-categorie="chaussettes" data-prix="2000" data-description="chaussettes Nike">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=f2"><img src="imges/image-carte/Chaussettes-Nike-Tie.jpg" alt="Chaussettes Nike"></a>
+                   <h3><a href="panier.html?id=f2">Chaussettes Nike</a></h3>
+                   <p class="description">Chaussettes Nike</p>
+                   <p class="note">★★★★☆<span>45</span></p>
+                   <p class="prix">2000 FCFA<span class="ancien-prix">4000 FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f3" data-categorie="chemisse" data-prix="5000" data-description="chemisse rouge">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=3"><img src="imges/image-carte/chemisse-rouge.jpg" alt="Chemisse rouge"></a>
+                   <h3><a href="panier.html?id=f3">Chemisse rouge</a></h3>
+                   <p class="description">chemisse rouge</p>
+                   <p class="note">★★★★☆<span>40</span></p>
+                   <p class="prix">5000 FCFA<span class="ancien-prix">10 000 FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f4" data-categorie="chemisse" data-prix="5000 " data-description="Chemisse blanc noir">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=4"><img src="imges/image-carte/Chemisse-blanc-noir.jpg" alt="chemisse blanc noir"></a>
+                   <h3><a href="panier.html?id=f4">Chemisse blanc noir</a></h3>
+                   <p class="description">chemisse blanc noir</p>
+                   <p class="note">★★★★☆<span>50</span></p>
+                   <p class="prix">5000 FCFA<span class="ancien-prix">10 000 FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f5" data-categorie="sport" data-prix="25000" data-description="chaussure de sport">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=f5"><img src="imges/image-carte/basketjordan.jpg" alt="Chaussure de sport"></a>
+                   <h3><a href="panier.html?id=f5">Chaussure de sport</a></h3>
+                   <p class="description">Chaussure de sport</p>
+                   <p class="note">★★★★☆<span>60</span></p>
+                   <p class="prix">25 000 FCFA<span class="ancien-prix">50 000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f6" data-categorie="cagoule" data-prix="5000" data-description="cagoule ">
+                   <span class="badge-remise">-50%</span>
+                   <a href="panier.html?id=f6"><img src="imges/image-carte/télécharger-11.jpg" alt="cagoule "></a>
+                   <h3><a href="panier.html?id=f6">Cagoule</a></h3>
+                   <p class="description">Cagoule</p>
+                   <p class="note">★★★★☆<span>73</span></p>
+                   <p class="prix">5000 FCFA<span class="ancien-prix">10 000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f7" data-categorie="cagoule" data-prix="5000" data-description="cagoule">
+                   <span class="badge-remise">-50%</span>
+                   <a href="panier.html?id=f7"><img src="imges/image-carte/télécharger-12.jpg" alt="Cagoule"></a>
+                   <h3><a href="panier.html?id=f7">Boner</a></h3>
+                   <p class="description">Boner</p>
+                   <p class="note">★★★★☆<span>43</span></p>
+                   <p class="prix">5000 FCFA<span class="ancien-prix">10 000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f8" data-categorie="cagoule" data-prix="5000" data-description="">
+                   <span class="badge-remise">-50%</span>
+                   <a href="panier.html?id=f8"><img src="imges/image-carte/télécharger-13.jpg" alt="CAGOULE"></a>
+                   <h3><a href="panier.html?id=f8">Boner</a></h3>
+                   <p class="description">Boner</p>
+                   <p class="note">★★★★☆<span>30</span></p>
+                   <p class="prix">5000 FCFA<span class="ancien-prix">10 000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+
+                <article class="carte-produit" data-id="f9" data-categorie="crops" data-prix="5000" data-description="">
+                   <span class="badge-remise">-50%</span>
+                   <a href="panier.html?id=f9"><img src="imges/image-carte/télécharger-14.jpg" alt="crops"></a>
+                   <h3><a href="panier.html?id=f9">Crops</a></h3>
+                   <p class="description">crops</p>
+                   <p class="note">★★★☆<span>50</span></p>
+                   <p class="prix">5000 FCFA<span class="ancien-prix">10000 FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+                </article>
+             </div>
+
+             <button type="button" class="rangee-fleche droite" aria-label="suivant">&#10095;</button>
+           </div>
+        </section>
+        
+        <div id="zones-marques"></div>
+
+        <div class="voir-tout">
+          <a href="catalogue.html" class="btn-voir-tout">Voir tous les produits</a>
+        </div>
+   
+        <section class="produits" id="produit">
+         <h2>Nos Produits</h2>
+          <div class="liste-produits">
+
+            <article class="carte-produit" data-id="1" data-categorie="sport" data-prix="25000" data-description="Chaussure de sport légère avec semelle amortissante, idéale pour la course et la marche. Tissu respirant.">
+                <span class="badge-remise">-24%</span>
+                <a href="produit.html?id=1"><img src="imges/image-carte/chaussure-de-sport.jpg" alt="chaussure de sport"></a>
+                <h3><a href="produit.html?id=1">Chaussure de sport</a></h3>
+                <p class="description">Légère et confortable.</p>
+                <p class="note">★★★★☆ <span>(24)</span></p>
+                <p class="prix">25 000 FCFA <span class="ancien-prix">33 000 FCFA</span></p>
+                <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="2" data-categorie="sandale" data-prix="18000" data-description="style décontracté trés souple bonne pour une promenade">
+                <span class="badge-remise">-25%</span>
+                <a href="produit.html?id=2"><img src="imges/image-carte/sandale.jpg" alt="sandale"></a>
+                <h3><a href="produit.html?id=2">Sandale en daim</a></h3>
+                <p class="description">Style décontracté, trés souple.</p>
+                <p class="note">★★★★☆ <span>(25)</span></p>
+                <p class="prix">18 000 FCFA <span class="ancien-prix">24 000 FCFA</span></p>
+                <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="3" data-categorie="baskets" data-prix="32000" data-description="Bonne pour une sortie entre amie et mm pour l'ecole">
+                <span class="badge-remise">-20%</span>
+                <a href="produit.html?id=3"><img src="imges/image-carte/basket-noir.jpg" alt="basket"></a>
+                <h3><a href="produit.html?id=3">Baskets noires</a></h3>
+                <p class="description">Semelle épaisse, très stable.</p>
+                <p class="note">★★★★☆ <span>(20)</span></p>
+                <p class="prix">32 000 FCFA <span class="ancien-prix">40 000 FCFA</span></p>
+                <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="4" data-categorie="baskets" data-prix="32000" data-description="tres stable est propre">
+                <span class="badge-remise">-20%</span>
+                <a href="produit.html?id=4"><img src="imges/basket-blanche.jpg" alt="basket blanche"></a>
+                <h3><a href="produit.html?id=4">Baskets blanche</a></h3>
+                <p class="description">Semelle épaisse, très stable.</p>
+                <p class="note">★★★★☆ <span>(20)</span></p>
+                <p class="prix">32 000 FCFA <span class="ancien-prix">40 000 FCFA</span></p>
+                <button type="button">Ajouter au panier</button>
+            </article>
+            
+            <article class="carte-produit" data-id="5" data-categorie="lunete" data-prix="1000" data-description="Lunete">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=5"><img src="imges/image-carte/télécharger-15.jpg" alt="LUNETE"></a>
+                   <h3><a>Lunete</a></h3>
+                   <p class="description">lunete</p>
+                   <p class="note">★★★★☆<span>(40)</span></p>
+                   <p class="prix">500 FCFA<span class="ancien-prix">1000 FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+             <article class="carte-produit" data-id="6" data-categorie="bracelet" data-prix="500" data-description="bracelet homme">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=6"><img src="imges/image-carte/télécharger-16.jpg" alt="bracelet homme"></a>
+                   <h3><a>Bracelet homme</a></h3>
+                   <p class="description">bracelet homme</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">500 FCFA<span class="ancien-prix">1000 FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="7" data-categorie="crocs" data-prix="10000" data-description="crocs nike">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=7"><img src="imges/image-carte/crocs-nike.jpg" alt="crocs nike"></a>
+                   <h3><a>Crocs Nike</a></h3>
+                   <p class="description">crcs nike </p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">10.000FCFA<span class="ancien-prix">20.000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="8" data-categorie="boner Nike" data-prix="10000" data-description="boner nike">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=8"><img src="imges/image-carte/boner-nike.jpg" alt=""></a>
+                   <h3><a>Boner Nike</a></h3>
+                   <p class="description">boner nike</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">5000FCFA<span class="ancien-prix">10.000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="9" data-categorie="culote" data-prix="4000" data-description="culote">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=9"><img src="imges/image-carte/culote.jpg" alt="culote"></a>
+                   <h3><a>Culote</a></h3>
+                   <p class="description">culote</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">4000FCFA<span class="ancien-prix">8000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="10" data-categorie="pull" data-prix="10000" data-description="tee-shirt">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=10"><img src="imges/image-carte/pull.jpg" alt="PULL"></a>
+                   <h3><a>Pull</a></h3>
+                   <p class="description">Pull homme</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">10.000FCFA<span class="ancien-prix">20.000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+             <article class="carte-produit" data-id="11" data-categorie="tee-shirt" data-prix="4000" data-description="tee-shirt">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=11"><img src="imges/image-carte/t-shirt-long-bras.jpg" alt="tee-shirt"></a>
+                   <h3><a>tee-shirt</a></h3>
+                   <p class="description"> tee-shirt homme bras long </p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">4000FCFA<span class="ancien-prix">8000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+             <article class="carte-produit" data-id="12" data-categorie="tee-shirt" data-prix="4000" data-description="tee-shirt">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=12"><img src="imges/image-carte/t-shirt1.jpg" alt="tee-shirt"></a>
+                   <h3><a>tee-shirt</a></h3>
+                   <p class="description"> tee-shirt homme bras long</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">4000FCFA<span class="ancien-prix">8000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+            <article class="carte-produit" data-id="13" data-categorie="survette Adidas" data-prix="" data-description="survette Adidas">
+                   <span class="badge-remise">-25%</span>
+                   <a href="produit.html?id=13"><img src="imges/image-carte/adidas1.jpg" alt="survette Adidas"></a>
+                   <h3><a>survette Adidas</a></h3>
+                   <p class="description">survette Adidas</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">20.000FCFA<span class="ancien-prix">30.000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+             <article class="carte-produit" data-id="14" data-categorie="survette Adidas" data-prix="" data-description="survette Adidas">
+                   <span class="badge-remise">-25%</span>
+                   <a href="produit.html?id=14"><img src="imges/image-carte/adidas2.jpg" alt="survette Adidas"></a>
+                   <h3><a>survette Adidas</a></h3>
+                   <p class="description">survette Adidas</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">20.000FCFA<span class="ancien-prix">20.000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+             <article class="carte-produit" data-id="15" data-categorie="Bracelet homme" data-prix="" data-description="Bracelet homme">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=15"><img src="imges/image-carte/bracceler.jpg" alt="Bracelet homme"></a>
+                   <h3><a>Bracelet homme</a></h3>
+                   <p class="description">Bracelet homme</p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix">500FCFA<span class="ancien-prix">1000FCFA</span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+
+             <article class="carte-produit" data-id="" data-categorie="" data-prix="" data-description="">
+                   <span class="badge-remise">-50%</span>
+                   <a href="produit.html?id=6"><img src="" alt=""></a>
+                   <h3><a></a></h3>
+                   <p class="description"></p>
+                   <p class="note">★★★★☆<span>(50)</span></p>
+                   <p class="prix"><span class="ancien-prix"></span></p>
+                   <button type="button">Ajouter au panier</button>
+            </article>
+          </div>
+         <p id="aucun-resultat" hidden>Aucun produit ne correspond à votre recherche.</p>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="pied-page">
+        <h3>Contact</h3>
+        <p>Téléphone : 07 00 00 00 00</p>
+        <p>Email : contact@maboutique.ci</p>
+        <p>Abidjan,  Côte d'Ivoire</p>
+    </footer>
+
+    <button type="button" id="btn-haut" class="btn-haut" aria-label="Retour en haut">&#8593;</button>
+
+    <script src="donnees-produits.js"></script>
+    <script src="script.js"></script>
+    <script src="marque.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+</html>
